@@ -21,6 +21,6 @@ for symbol in symbols:
     clean_stock_data[symbol] = df
 
     # Save CSV (overwrite old file)
-    df.to_csv(f"{symbol}_clean.csv", index=False)
+    df.to_csv(f"data/clean/{symbol}_clean.csv", index=False)
 
 print("All stock CSVs are updated!")
