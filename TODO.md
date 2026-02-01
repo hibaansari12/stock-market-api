@@ -1,0 +1,9 @@
+- [ ] Rename 'company' to 'Company' in models.py
+- [ ] Rename 'stock_data' to 'StockData' in models.py
+- [ ] Fix ForeignKey in StockData to reference 'Company'
+- [ ] Fix **str** method indentation in StockData
+- [ ] Update serializers.py imports to 'StockData' and 'Company'
+- [ ] Update views.py import to 'StockData' and add StockDetailAPIView
+- [ ] Update admin.py to register 'Company' and 'StockData'
+- [ ] Run makemigrations and migrate
+- [ ] Test with runserver
