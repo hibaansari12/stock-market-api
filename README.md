@@ -55,3 +55,14 @@ python manage.py createsuperuser
 #Run the development server:
 python manage.py runserver
 
+### API Endpoints
+
+| App / Module | Method | Endpoint | Description |
+| :--- | :--- | :--- | :--- |
+| **Companies** | `GET` | `/api/companies/` | List all companies |
+| **Companies** | `GET` | `/api/companies/<symbol>/` | Get company details by symbol |
+| **Stocks** | `GET` | `/api/stocks/` | Retrieve all stock data |
+| **Stocks** | `GET` | `/api/stocks/<symbol>/` | Get stock data for a specific company |
+| **Stocks** | `GET` | `/api/stocks/<symbol>/recent/` | Fetch most recent stock data |
+| **Stocks** | `GET` | `/api/stocks/<symbol>/summary/` | Summary statistics (avg, min, max, latest) |
+| **Stocks** | `GET` | `/api/stocks/compare/` | Compare two stocks using query params |
