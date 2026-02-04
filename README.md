@@ -55,6 +55,17 @@ python manage.py createsuperuser
 #Run the development server:
 python manage.py runserver
 
-### API Endpoints
+ API Structure
+Base URL
 
+## 📌 API Endpoints
 
+| API Name              | Endpoint                               | Description                                      |
+|----------------------|----------------------------------------|--------------------------------------------------|
+| List Companies       | `/api/companies/`                      | Retrieve a list of all companies                 |
+| Company Details      | `/api/companies/<symbol>/`             | Get details of a specific company by symbol      |
+| List All Stocks      | `/api/stocks/`                         | Retrieve stock data for all companies            |
+| Stock by Company     | `/api/stocks/<symbol>/`                | Get all stock records for a specific company     |
+| Example (Apple)      | `/api/stocks/AAPL/`                    | Fetch stock data for Apple Inc (AAPL)            |
+| Swagger UI           | `/swagger/`                            | Interactive API documentation (Swagger UI)       |
+| ReDoc                | `/redoc/`                              | Read-only API documentation (ReDoc)              |
