@@ -28,10 +28,9 @@ Swagger UI and ReDoc documentation are included for interactive exploration.
 ---
 
 ## Installation
-
+```css
 1. Clone the repository:
 
-```bash
 git clone https://github.com/yourusername/stock-api.git
 cd stock-api
 # Create virtual environment
@@ -39,33 +38,40 @@ python -m venv .venv
 
 # Activate virtual environment
 # Windows
-.\.venv\Scripts\activate
-# Linux/Mac
+.venv\Scripts\activate
+# Linux / Mac
 source .venv/bin/activate
 
-#Install dependencies:
+# Install dependencies
 pip install -r requirements.txt
 
-#Apply migrations:
+# Run migrations
 python manage.py migrate
 
-#Create a superuser (optional, for admin access):
+# Create superuser
 python manage.py createsuperuser
 
-#Run the development server:
+# Run development server
 python manage.py runserver
-
- API Structure
+```
+#API Structure
 Base URL
+```css
+http://localhost:8000/api/v1/
+```
 
 ## 📌 API Endpoints
 
-| API Name              | Endpoint                               | Description                                      |
-|----------------------|----------------------------------------|--------------------------------------------------|
-| List Companies       | `/api/companies/`                      | Retrieve a list of all companies                 |
-| Company Details      | `/api/companies/<symbol>/`             | Get details of a specific company by symbol      |
-| List All Stocks      | `/api/stocks/`                         | Retrieve stock data for all companies            |
-| Stock by Company     | `/api/stocks/<symbol>/`                | Get all stock records for a specific company     |
-| Example (Apple)      | `/api/stocks/AAPL/`                    | Fetch stock data for Apple Inc (AAPL)            |
-| Swagger UI           | `/swagger/`                            | Interactive API documentation (Swagger UI)       |
-| ReDoc                | `/redoc/`                              | Read-only API documentation (ReDoc)              |
+```css
+
+| App        | Base Path                         | Description                                      |
+|------------|-----------------------------------|--------------------------------------------------|
+| Companies  | `/companies/`                     | List all available companies                     |
+| Companies  | `/companies/<symbol>/`            | Get company details by stock symbol              |
+| Stocks     | `/stocks/`                        | Retrieve stock data for all companies            |
+| Stocks     | `/stocks/<symbol>/`               | Get stock data for a specific company            |
+| Stocks     | `/stocks/AAPL/`                   | Example: fetch Apple (AAPL) stock data           |
+| Docs       | `/swagger/`                       | Interactive API documentation (Swagger UI)       |
+| Docs       | `/redoc/`                         | Read-only API documentation (ReDoc)              |
+
+---
